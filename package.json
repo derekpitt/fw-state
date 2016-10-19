@@ -1,0 +1,29 @@
+{
+  "name": "fw-state",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp build",
+    "test": "./node_modules/.bin/gulp test; ./node_modules/.bin/gulp clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-polyfill": "^6.13.0",
+    "chai": "^3.5.0",
+    "del": "^2.2.1",
+    "dts-generator": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^5.2.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-spawn-mocha": "^3.0.0",
+    "gulp-typescript": "^2.13.6",
+    "istanbul": "^0.4.4",
+    "mocha": "^3.0.2",
+    "run-sequence": "^1.2.1",
+    "typescript": "1.8.9",
+    "vinyl-paths": "^2.1.0"
+  }
+}
