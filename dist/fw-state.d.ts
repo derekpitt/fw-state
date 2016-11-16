@@ -45,5 +45,6 @@ declare module 'fw-state/store' {
 declare module 'fw-state' {
 	export * from 'fw-state/store';
 	export * from 'fw-state/makerOf';
+	export { Subscription } from 'fw-state/bus';
 
 }
