@@ -2,10 +2,17 @@
   "compilerOptions": {
     "noImplicitAny": false,
     "target": "es6",
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "outDir": "dist"
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "build-temp",
+    "test"
   ]
 }

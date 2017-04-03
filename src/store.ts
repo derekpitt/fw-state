@@ -130,7 +130,8 @@ export abstract class Store<T> {
 
   protected abstract defaultState(): T;
 
-  protected setState(newState: any) {
+  protected setState(newStateFn: (currentState: T) => T) {
+    const newState = newStateFn(this.state);
     Object.assign(this.state, newState);
 
     this.localBus.publish(new StoreStateChanged());

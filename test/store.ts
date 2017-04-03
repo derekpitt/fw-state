@@ -63,13 +63,13 @@ class TestStore extends Store<{ hi: string }> {
   @handle(TestAction)
   private async handleTestAction(t: TestAction) {
     await wait(5);
-    this.setState({ hi: t.hi });
+    this.setState(state => ({ ...state, hi: t.hi }));
   }
 
   @handle(AnotherTestAction, AnotherTestHandlerWrapper)
   private async handleAnotherTestAction(t: AnotherTestAction) {
     await wait(5);
-    this.setState({ hi: t.hi });
+    this.setState(state => ({ hi: t.hi }));
   }
 }
 
@@ -104,7 +104,7 @@ describe("store", () => {
 
   describe("onStateChanged", () => {
     it("should call when state changed", async () => {
-      let called = false;
+      let called: boolean = false;
       const testStore = containerInstance.get(TestStore);
 
       testStore.onStateChanged(() => {
@@ -113,7 +113,7 @@ describe("store", () => {
 
       await dispatch(new TestAction("powow"));
 
-      assert(called == true);
+      assert(called);
     });
 
     it("should unsubscribe", async () => {
