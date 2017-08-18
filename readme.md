@@ -94,7 +94,9 @@ export class LogoutAction {}
 // ....
 ```
 
-Accessing state is as easy as:
+You can imagine that if you have a lot of different stores containing data, dispatching one action to reset every stores' state is ideal.
+
+# Accessing state
 
 ```typescript
 const myStore1 = containerInstance.get(MyStore1);
@@ -103,7 +105,7 @@ const { loggedIn } = myStore1.state;
 console.log(loggedIn ? "Hi!!" : "Please Log In");
 ```
 
-## Listen for changes
+# Listen for changes
 
 If you need to, you can manually listen to changes with:
 
