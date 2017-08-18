@@ -43,7 +43,7 @@ export class MyStore1 extends Store<{ loggedIn: boolean }> {
       throw new Error("Could not log in");
     }
 
-    // when you are satisifed, you can update the state of this store..
+    // when you are satisfied, you can update the state of this store..
     this.setState(state => ({
       ...state,
       loggedIn: true,
