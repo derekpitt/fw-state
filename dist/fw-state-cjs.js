@@ -1,3 +1,7 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -361,4 +365,8 @@ var Store = function () {
     return Store;
 }();
 
-export { handle, waitFor, setupStores, dispatch, Store };
+exports.handle = handle;
+exports.waitFor = waitFor;
+exports.setupStores = setupStores;
+exports.dispatch = dispatch;
+exports.Store = Store;
